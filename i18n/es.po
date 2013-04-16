@@ -1,0 +1,234 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* bom_variant_multi
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.1-20121004-232945\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-05 16:47+0000\n"
+"PO-Revision-Date: 2012-10-05 16:47+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bom_variant_multi
+#: help:mrp.bom,match_condition:0
+msgid "Domain Expression if this product should be used, expressed on the product objecte.g. [(\"name\", \"ilike\", \"frilly\"), (\"name\", \"ilike\", \"DD\")]"
+msgstr "Domain Expression if this product should be used, expressed on the product objecte.g. [(\"name\", \"ilike\", \"frilly\"), (\"name\", \"ilike\", \"DD\")]"
+
+#. module: bom_variant_multi
+#: view:mrp.bom:0
+msgid "Dimension Map"
+msgstr "Dimension Map"
+
+#. module: bom_variant_multi
+#: sql_constraint:mrp.production:0
+msgid "Reference must be unique per Company!"
+msgstr "Referencia debe ser única por compañía!"
+
+#. module: bom_variant_multi
+#: model:ir.model,name:bom_variant_multi.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "Órden de producción"
+
+#. module: bom_variant_multi
+#: constraint:mrp.bom:0
+msgid "BoM line product should not be same as BoM product."
+msgstr "Un producto de línea de LdM no puede ser el mismo que el producto fabricado por la Ldm"
+
+#. module: bom_variant_multi
+#: help:bom.dimension_map,match_opt_condition:0
+msgid "Domain Expression to select which product should be used, expressed on the product option \n"
+"The base variable is available which is the selected products dimension optione.g. [(\"name\", \"=\", base.name)]"
+msgstr "Domain Expression to select which product should be used, expressed on the product option \n"
+"The base variable is available which is the selected products dimension optione.g. [(\"name\", \"=\", base.name)]"
+
+#. module: bom_variant_multi
+#: constraint:product.template:0
+msgid "Error: The default UOM and the purchase UOM must be in the same category."
+msgstr "Error: La UdM por defecto y la UdM de compra deben estar en la misma categoría."
+
+#. module: bom_variant_multi
+#: code:addons/bom_variant_multi/bom_template.py:321
+#, python-format
+msgid "More than one mapped dimension value matched the search condition"
+msgstr "More than one mapped dimension value matched the search condition"
+
+#. module: bom_variant_multi
+#: model:ir.actions.act_window,name:bom_variant_multi.action_bom_variant_multi_dimension_map
+#: model:ir.ui.menu,name:bom_variant_multi.menu_alta_tax
+msgid "Dimension Mappings"
+msgstr "Dimension Mappings"
+
+#. module: bom_variant_multi
+#: field:bom.dimension_map,bom_tmpl_id:0
+msgid "BoM Templates"
+msgstr "BoM Templates"
+
+#. module: bom_variant_multi
+#: field:mrp.bom,bom_template:0
+msgid "Template"
+msgstr "Template"
+
+#. module: bom_variant_multi
+#: field:bom.dimension_map,base_dimension_type:0
+msgid "Base Dimension Type"
+msgstr "Base Dimension Type"
+
+#. module: bom_variant_multi
+#: model:ir.model,name:bom_variant_multi.model_bom_dimension_map
+msgid "BoM Template Variant Dimension Match"
+msgstr "BoM Template Variant Dimension Match"
+
+#. module: bom_variant_multi
+#: field:bom.dimension_map,mapped_dimension_type:0
+msgid "Mapped Dimension Type"
+msgstr "Mapped Dimension Type"
+
+#. module: bom_variant_multi
+#: code:addons/bom_variant_multi/bom_template.py:417
+#, python-format
+msgid "Couldn't find bill of material for product"
+msgstr "Couldn't find bill of material for product"
+
+#. module: bom_variant_multi
+#: selection:bom.dimension_map,mapping_type:0
+msgid "Same Variants One -> One"
+msgstr "Same Variants One -> One"
+
+#. module: bom_variant_multi
+#: field:mrp.bom,dimension_map_ids:0
+msgid "BoM Variant Dimensions Match"
+msgstr "BoM Variant Dimensions Match"
+
+#. module: bom_variant_multi
+#: constraint:mrp.production:0
+msgid "Order quantity cannot be negative or zero!"
+msgstr "¡La cantidad de la orden no puede ser negativa o cero!"
+
+#. module: bom_variant_multi
+#: view:product.variant.dimension.option:0
+#: field:product.variant.dimension.option,related_options:0
+msgid "Related Options"
+msgstr "Related Options"
+
+#. module: bom_variant_multi
+#: view:mrp.bom:0
+msgid "Properties"
+msgstr "Propiedades"
+
+#. module: bom_variant_multi
+#: selection:bom.dimension_map,mapping_type:0
+msgid "Different Variants - One -> One Mapping"
+msgstr "Different Variants - One -> One Mapping"
+
+#. module: bom_variant_multi
+#: constraint:mrp.bom:0
+msgid "Error ! You cannot create recursive BoM."
+msgstr "¡Error! No puede crear una LdM recursiva"
+
+#. module: bom_variant_multi
+#: model:ir.model,name:bom_variant_multi.model_product_template
+#: field:mrp.bom,product_tmpl_id:0
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: bom_variant_multi
+#: sql_constraint:mrp.bom:0
+msgid "All product quantities must be greater than 0.\n"
+"You should install the mrp_subproduct module if you want to manage extra products on BoMs !"
+msgstr "Todas las cantidades de producto deben de ser superiores a cero.\n"
+"¡Debe instalar el módulo mrp_subproduct si quiere gestionar productos extra en las LdM!"
+
+#. module: bom_variant_multi
+#: field:bom.dimension_map,name:0
+msgid "Name"
+msgstr "Name"
+
+#. module: bom_variant_multi
+#: view:bom.dimension_map:0
+msgid "Dimension Match"
+msgstr "Dimension Match"
+
+#. module: bom_variant_multi
+#: code:addons/bom_variant_multi/bom_template.py:320
+#: code:addons/bom_variant_multi/bom_template.py:324
+#, python-format
+msgid "Error!"
+msgstr "Error!"
+
+#. module: bom_variant_multi
+#: code:addons/bom_variant_multi/bom_template.py:338
+#, python-format
+msgid "No matching product found!"
+msgstr "No matching product found!"
+
+#. module: bom_variant_multi
+#: field:bom.dimension_map,mapping_type:0
+msgid "Mapping Type"
+msgstr "Mapping Type"
+
+#. module: bom_variant_multi
+#: view:mrp.bom:0
+msgid "Components"
+msgstr "Componentes"
+
+#. module: bom_variant_multi
+#: code:addons/bom_variant_multi/bom_template.py:338
+#: code:addons/bom_variant_multi/bom_template.py:417
+#, python-format
+msgid "Error"
+msgstr "Error"
+
+#. module: bom_variant_multi
+#: code:addons/bom_variant_multi/bom_template.py:325
+#, python-format
+msgid "No mapped dimension values matched the search condition"
+msgstr "No mapped dimension values matched the search condition"
+
+#. module: bom_variant_multi
+#: view:mrp.bom:0
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: bom_variant_multi
+#: model:ir.model,name:bom_variant_multi.model_mrp_bom
+#: view:mrp.bom:0
+msgid "Bill of Material"
+msgstr "Lista de material"
+
+#. module: bom_variant_multi
+#: help:mrp.bom,bom_template:0
+msgid "If this field is set to True it matches the products based on the template"
+msgstr "If this field is set to True it matches the products based on the template"
+
+#. module: bom_variant_multi
+#: model:ir.ui.menu,name:bom_variant_multi.menu_bom_variant_multi_bom
+msgid "Master Data"
+msgstr "Datos principales"
+
+#. module: bom_variant_multi
+#: field:bom.dimension_map,match_opt_condition:0
+#: field:mrp.bom,match_condition:0
+msgid "Match Condition"
+msgstr "Match Condition"
+
+#. module: bom_variant_multi
+#: view:mrp.bom:0
+msgid "Revisions"
+msgstr "Revisiones"
+
+#. module: bom_variant_multi
+#: field:product.template,code_for_generated_products:0
+msgid "Code for Generated Products"
+msgstr "Codigo para Productos Generados"
+
+#. module: bom_variant_multi
+#: model:ir.model,name:bom_variant_multi.model_product_variant_dimension_option
+msgid "Dimension Option"
+msgstr "Dimension Option"
+

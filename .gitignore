@@ -1,0 +1,6 @@
+*.py[co]
+
+# Ignore Eclipse IDE files
+.settings
+.project
+.pydevproject
