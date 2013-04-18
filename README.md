@@ -17,7 +17,10 @@ product object which if met will add the product to the bom, otherwise it will n
 knickers, called frilly knickers, which calls for a quantity of lace then you can match that and if not the lace will
 not be added.
 
-This software was original writed by **O4SB**, and was patched by **Enterprise Objects Consulting** some issues.
+Also this module allow you to create a Manufacturing Order without BOM.
+
+This software was original writed by **O4SB**, and was patched by **Enterprise Objects Consulting** some issues
+and new features.
 
 This sources are available in https://github.com/eoconsulting/bom_variant_multi
 

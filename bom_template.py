@@ -424,32 +424,22 @@ class mrp_production(osv.osv):
                        (production.id,))
             bom_point = production.bom_id
             bom_id = production.bom_id.id
-            if not bom_point:
-                bom_id = bom_obj._bom_find(cr, uid, production.product_id.id, 
-                                           production.product_uom.id, properties)
-                if bom_id:
-                    bom_point = bom_obj.browse(cr, uid, bom_id)
-                    self.write(cr, uid, [production.id], 
-                               {'bom_id': bom_id, 'routing_id': bom_point.routing_id.id or False})
-
-            if not bom_id:
-                raise osv.except_osv(_('Error'), _("Couldn't find bill of material for product"))
-
-            factor = (production.product_qty * 
-                      production.product_uom.factor_inv / 
-                      bom_point.product_uom.factor)
-            
-            results, results2 = bom_obj._bom_explode(
-                                    cr, uid, bom_point, factor / bom_point.product_qty, 
-                                    production.product_id.id, production.product_id.id, 
-                                    properties
-                                    )
-            for line in results:
-                line['production_id'] = production.id
-                prod_line_obj.create(cr, uid, line)
-            for line in results2:
-                line['production_id'] = production.id
-                workcenter_line_obj.create(cr, uid, line)
+            if bom_id:
+                factor = (production.product_qty * 
+                          production.product_uom.factor_inv / 
+                          bom_point.product_uom.factor)
+                
+                results, results2 = bom_obj._bom_explode(
+                                        cr, uid, bom_point, factor / bom_point.product_qty, 
+                                        production.product_id.id, production.product_id.id, 
+                                        properties
+                                        )
+                for line in results:
+                    line['production_id'] = production.id
+                    prod_line_obj.create(cr, uid, line)
+                for line in results2:
+                    line['production_id'] = production.id
+                    workcenter_line_obj.create(cr, uid, line)
         self._compute_planned_workcenter(cr, uid, ids, context={})
         return len(results)
 

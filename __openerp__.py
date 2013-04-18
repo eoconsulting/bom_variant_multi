@@ -20,8 +20,8 @@
 ##############################################################################
 {
     'name': 'MRP Bill of Material Templates',
-    'version': '1.1',
-    'category': '',
+    'version': '1.2',
+    'category': 'Manufacturing',
     'author': 'O4SB / Enterprise Objects Consulting',
     'website': 'http://www.eoconsulting.com.ar',
     'depends': ['base', 'product_variant_multi', 'mrp', 'mrp_operations'],
@@ -41,6 +41,8 @@
     product object which if met will add the product to the bom, otherwise it will not.  e.g say you have a variant of
     knickers, called frilly knickers, which calls for a quantity of lace then you can match that and if not the lace will
     not be added.
+    
+    Also this module allow you to create a Manufacturing Order without BOM.
     ''',
     'data': ['security/ir.model.access.csv'],
     'update_xml': ['mrp_view.xml'],
