@@ -1,6 +1,8 @@
 MRP Bill of Material Templates
 ==============================
 
+**This project has been moved to https://launchpad.net/~eoc**
+
 This module implements BOM templates, more analogous to account templates than product templates.
 
 A BOM template is created which then creates the associated BOM's. For any bom line you may specify a 
